@@ -15,10 +15,26 @@ export default function Hero() {
     const connection = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection
     if (matchMedia('(prefers-reduced-motion: reduce)').matches || connection?.saveData) return
 
+    const fallbackKey = 'pearl.hero.photoOnly'
+    try {
+      if (sessionStorage.getItem(fallbackKey)) return
+    } catch {
+      // The photo fallback also works when browser storage is unavailable.
+    }
+
+    function usePhoto() {
+      try {
+        sessionStorage.setItem(fallbackKey, '1')
+      } catch {
+        // Apply the fallback to this page even without session storage.
+      }
+      stop()
+    }
+
     function stop() {
       clearTimeout(timer)
       film.removeEventListener('playing', reveal)
-      film.removeEventListener('error', stop)
+      film.removeEventListener('error', usePhoto)
       film.pause()
       film.removeAttribute('src')
       film.load()
@@ -29,11 +45,11 @@ export default function Hero() {
       setVisible(true)
       setPaused(false)
     }
-    const timer = window.setTimeout(stop, 4000)
+    const timer = window.setTimeout(usePhoto, 4000)
     film.addEventListener('playing', reveal)
-    film.addEventListener('error', stop)
+    film.addEventListener('error', usePhoto)
     film.src = 'https://raw.githubusercontent.com/ChandrinSri/kay-tours/main/public/images/hero.mp4'
-    void film.play().catch(stop)
+    void film.play().catch(() => { if (film.hasAttribute(\x27src\x27)) usePhoto() })
     return stop
   }, [])
 

@@ -41,7 +41,7 @@ export default function Hero() {
   return <section className="hero">
     <img className="media" src="https://res.cloudinary.com/dvdwvlhpy/image/upload/f_auto,q_auto,w_1800,c_limit/v1777220412/Website_Images_1_fluhcx.png" fetchPriority="high" alt="" />
     <video ref={video} className="media" muted loop playsInline aria-hidden="true" style={{ opacity: visible ? 1 : 0 }} />
-    <header><strong>Pearl Tours</strong><nav aria-label="Main navigation"><a href="#featured">Our tours</a> <a href="about.html">About us</a></nav></header>
+    <header><strong>Pearl Tours</strong><nav aria-label="Main navigation"><a href="#featured">Our tours</a> <a href="about.html">About us</a> <a href="contact.html">Contact us</a></nav></header>
     <div className="intro">
       <h1>Discover<br /><i>Sri Lanka.</i></h1>
       <p>From the tea hills to the Indian Ocean, explore the island with our family in Australia and our travel partners in Sri Lanka.</p>
@@ -50,3 +50,4 @@ export default function Hero() {
     {visible && <button onClick={togglePlayback}>{paused ? 'Play film' : 'Pause film'}</button>}
   </section>
 }
+

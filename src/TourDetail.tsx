@@ -9,5 +9,7 @@ export default function TourDetail({ tour }: { tour: Tour }) {
     {tour.days.map(day => <section key={day.title}>
       <h2>{day.title}</h2><p>{day.description}</p>
     </section>)}
+    <a href={`../contact.html?tour=${tour.slug}`}>Enquire about this tour →</a>
   </main>
 }
+

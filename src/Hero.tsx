@@ -49,7 +49,7 @@ export default function Hero() {
     film.addEventListener('playing', reveal)
     film.addEventListener('error', usePhoto)
     film.src = 'https://raw.githubusercontent.com/ChandrinSri/kay-tours/main/public/images/hero.mp4'
-    void film.play().catch(() => { if (film.hasAttribute(\x27src\x27)) usePhoto() })
+    void film.play().catch(() => { if (film.hasAttribute('src')) usePhoto() })
     return stop
   }, [])
 

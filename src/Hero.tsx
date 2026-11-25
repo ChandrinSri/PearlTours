@@ -1,5 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
 
+const poster = 'https://res.cloudinary.com/dvdwvlhpy/image/upload/f_auto,q_auto,w_1800,c_limit/v1777220412/Website_Images_1_fluhcx.png'
+const posterSizes = [480, 768, 1200, 1800]
+  .map(width => `${poster.replace('w_1800', 'w_' + width)} ${width}w`)
+  .join(', ')
+
 export default function Hero() {
   const video = useRef<HTMLVideoElement>(null)
   const [visible, setVisible] = useState(false)
@@ -39,7 +44,7 @@ export default function Hero() {
   }
 
   return <section className="hero">
-    <img className="media" src="https://res.cloudinary.com/dvdwvlhpy/image/upload/f_auto,q_auto,w_1800,c_limit/v1777220412/Website_Images_1_fluhcx.png" fetchPriority="high" alt="" />
+    <img className="media" src={poster} srcSet={posterSizes} sizes="100vw" fetchPriority="high" alt="" />
     <video ref={video} className="media" muted loop playsInline aria-hidden="true" style={{ opacity: visible ? 1 : 0 }} />
     <header><strong>Pearl Tours</strong><nav aria-label="Main navigation"><a href="tours.html">Our tours</a> <a href="about.html">About us</a> <a href="contact.html">Contact us</a></nav></header>
     <div className="intro">

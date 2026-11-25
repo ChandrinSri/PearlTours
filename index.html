@@ -22,6 +22,10 @@ h2 { font-size:clamp(2.5rem,5vw,5rem); margin:0 0 2rem }
 details { border-top:1px solid #78968b; padding:1rem 0 }
 summary,button { cursor:pointer }
 button { position:absolute; bottom:1rem; right:1rem; background:#183e36; color:white; border:1px solid white; border-radius:2rem; padding:.5rem 1rem }
+.why { padding:clamp(3rem,7vw,7rem) 7vw; display:grid; grid-template-columns:1fr 1fr; gap:2rem; background:#edf1e9 }
+.why h2,.why p { margin:0 }
+.why p { max-width:46ch; align-self:center; font-size:1.15rem }
+@media (max-width:680px) { .why { grid-template-columns:1fr; gap:1rem } }
 </style>
 <main>
 <section class="hero">
@@ -32,6 +36,10 @@ button { position:absolute; bottom:1rem; right:1rem; background:#183e36; color:w
 <p>From the tea hills to the Indian Ocean, explore the island with our family in Australia and our travel partners in Sri Lanka.</p>
 <a class="cta" href="#tours">Explore tours ↗</a></div>
 <button hidden>Pause film</button>
+</section>
+<section class="why" aria-labelledby="why-pearl">
+<h2 id="why-pearl">Why Pearl Tours?</h2>
+<p>Your trip starts with a conversation in Australia. Tell us what you’d love to see, and we’ll help you choose an itinerary from our travel partners in Sri Lanka. From there, we can talk through the experiences you’d like to add along the way.</p>
 </section>
 <section id="tours"><h2>Explore by interest</h2>
 <details><summary>Wildlife</summary><p>Spend a morning on safari looking for elephants and spotting birds along the water.</p></details>

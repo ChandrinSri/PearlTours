@@ -139,6 +139,76 @@ export const tours = [
         "description": "After breakfast, transfer to airport for departure."
       }
     ]
+  },
+  {
+    "slug": "natures-treasures",
+    "title": "Nature's Treasures",
+    "category": "Wildlife",
+    "duration": "7 Days 6 Nights",
+    "image": "https://res.cloudinary.com/dvdwvlhpy/image/upload/f_auto,q_auto,w_800,h_500,c_fill/v1777227028/2_ykubrl.png",
+    "summary": "Travel from the tea country around Nuwara Eliya to Mirissa on the southern coast.",
+    "route": "Airport → Colombo → Kandy → Nuwara Eliya → Ella → Mirissa → Airport",
+    "days": [
+      {
+        "title": "Day 1 — Airport → Colombo",
+        "description": "Arrival at Colombo International Airport. Transfer to your hotel. Evening at leisure — explore Colombo's vibrant Galle Face Green."
+      },
+      {
+        "title": "Day 2 — Colombo → Kandy",
+        "description": "After breakfast, proceed to Kandy via the Pinnawala Elephant Orphanage. Evening city tour and optional cultural show."
+      },
+      {
+        "title": "Day 3 — Kandy → Nuwara Eliya",
+        "description": "Morning tea factory visit en route to Nuwara Eliya. Afternoon visit to Horton Plains and World's End viewpoint."
+      },
+      {
+        "title": "Day 4 — Nuwara Eliya → Ella",
+        "description": "Scenic train journey to Ella. Afternoon hike to Little Adam's Peak. Visit the iconic Nine Arch Bridge."
+      },
+      {
+        "title": "Day 5 — Ella → Mirissa",
+        "description": "Checkout and proceed to Mirissa along the southern coast. Afternoon at the beach. Evening sunset by the ocean."
+      },
+      {
+        "title": "Day 6 — Mirissa",
+        "description": "Early morning whale watching excursion. Return to hotel for breakfast. Afternoon at leisure on the beach."
+      },
+      {
+        "title": "Day 7 — Mirissa → Airport",
+        "description": "After breakfast, checkout and transfer to the airport for departure. Farewell from Sri Lanka!"
+      }
+    ]
+  },
+  {
+    "slug": "kandy-highlands",
+    "title": "Kandy & The Highlands",
+    "category": "History & culture",
+    "duration": "5 Days 4 Nights",
+    "image": "https://res.cloudinary.com/dvdwvlhpy/image/upload/f_auto,q_auto,w_800,h_500,c_fill/v1777227930/2_iyegt8.png",
+    "summary": "Explore Kandy’s lakeside temple and botanical gardens before heading into the hills for a tea tasting.",
+    "route": "Airport → Kandy → Nuwara Eliya → Ella → Airport",
+    "days": [
+      {
+        "title": "Day 1 — Airport → Kandy",
+        "description": "Arrival and transfer to Kandy. Evening visit to the Temple of the Tooth Relic. Kandy lake walk."
+      },
+      {
+        "title": "Day 2 — Kandy",
+        "description": "Morning Royal Botanical Gardens visit. Afternoon Udawatta Kele forest trek. Evening cultural dance show."
+      },
+      {
+        "title": "Day 3 — Kandy → Nuwara Eliya",
+        "description": "Scenic drive through tea country to Nuwara Eliya. Tea factory tour and tasting. Afternoon at leisure."
+      },
+      {
+        "title": "Day 4 — Nuwara Eliya → Ella",
+        "description": "Iconic train ride to Ella through tea estates and mountain scenery. Afternoon Nine Arch Bridge visit."
+      },
+      {
+        "title": "Day 5 — Ella → Airport",
+        "description": "Morning Ella Rock hike or leisure. Transfer to airport for departure."
+      }
+    ]
   }
 ]
 
@@ -164,3 +234,4 @@ export const experiences = [
     "summary": "Climb before dawn for a view across to Sigiriya, then come down for a traditional Sri Lankan breakfast."
   }
 ]
+

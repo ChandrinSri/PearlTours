@@ -13,7 +13,7 @@ function WhyPearl() {
 function FeaturedTours() {
   return <section id="featured">
     <h2>Featured tours</h2>
-    <TourGrid tours={tours} />
+    <TourGrid tours={tours.filter(tour => ['eco', 'cultural', 'adventure'].includes(tour.slug))} />
     <a href="tours.html">Browse all tours →</a>
   </section>
 }

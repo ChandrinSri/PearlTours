@@ -1,6 +1,8 @@
-import type { Tour } from './data'
+import { optionalActivities, type Tour } from './data'
 
 export default function TourDetail({ tour }: { tour: Tour }) {
+  const stops = tour.route.split(' → ')
+  const activities = optionalActivities.filter(activity => activity.stops.some(stop => stops.includes(stop)))
   return <main className="itinerary">
     <a href="../index.html#featured">← Pearl Tours · Featured tours</a>
     <h1>{tour.title}</h1><p>{tour.category} · {tour.duration}</p>
@@ -9,6 +11,15 @@ export default function TourDetail({ tour }: { tour: Tour }) {
     {tour.days.map(day => <section key={day.title}>
       <h2>{day.title}</h2><p>{day.description}</p>
     </section>)}
+    {activities.length > 0 && <section aria-labelledby="optional-activities">
+      <h2 id="optional-activities">Optional experiences along your route</h2>
+      <p>Ask us which activities can fit around your daily itinerary.</p>
+      {activities.map(activity => <article key={activity.title}>
+        <h3>{activity.title}</h3>
+        <p>{activity.stops.filter(stop => stops.includes(stop)).join(' or ')} · {activity.duration}</p>
+        <p>{activity.summary}</p>
+      </article>)}
+    </section>}
     <a href={`../contact.html?tour=${tour.slug}`}>Enquire about this tour →</a>
   </main>
 }

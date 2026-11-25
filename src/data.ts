@@ -235,3 +235,24 @@ export const experiences = [
   }
 ]
 
+
+export const optionalActivities = [
+  {
+    stops: ['Kandy', 'Colombo'],
+    title: 'Street food walk',
+    duration: 'Evening',
+    summary: 'Follow a local guide through the market lanes and sample Sri Lankan street food.',
+  },
+  {
+    stops: ['Colombo'],
+    title: 'Explore Colombo by tuk-tuk',
+    duration: 'Half day',
+    summary: 'Ride through the Fort district and stop at Pettah market and street food stalls.',
+  },
+  {
+    stops: ['Sigiriya'],
+    title: 'Sunrise on Pidurangala Rock',
+    duration: 'Morning · 4 hours',
+    summary: 'Climb before dawn for views of Sigiriya, then sit down to a Sri Lankan breakfast.',
+  },
+]

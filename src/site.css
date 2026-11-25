@@ -43,3 +43,13 @@ button { position:absolute; bottom:1rem; right:1rem; background:#183e36; color:w
 .site-footer strong { font: 2rem Georgia, serif }
 .site-footer nav { display: flex; flex-wrap: wrap; gap: .75rem 1.5rem }
 .site-footer a { text-underline-offset: .25em }
+
+header nav { display:flex; gap:1rem; align-items:center }
+.about-header { background:#163d37; color:#faf6ec; padding:1.5rem 7vw }
+.about-header > a { font:2rem Georgia,serif; text-decoration:none }
+.about-story { max-width:54rem; margin:auto; padding:clamp(3rem,8vw,7rem) 7vw }
+.about-story h1 { font-size:clamp(3rem,7vw,5rem) }
+.about-story h2 { font-size:2rem; margin:2.5rem 0 1rem }
+.about-story p { font-size:1.15rem }
+.about-story > a { display:inline-block; margin-top:1rem }
+@media (max-width:32rem) { header { flex-wrap:wrap; gap:.75rem } }

@@ -1,3 +1,4 @@
+import Footer from './Footer'
 import Hero from './Hero'
 import { experiences, tours } from './data'
 
@@ -47,5 +48,10 @@ function Experiences() {
 }
 
 export default function Home() {
-  return <main><Hero /><WhyPearl /><FeaturedTours /><Interests /><Experiences /></main>
+  return (
+    <>
+      <main><Hero /><WhyPearl /><FeaturedTours /><Interests /><Experiences /></main>
+      <Footer />
+    </>
+  )
 }

@@ -1,86 +1,9 @@
 <!doctype html>
 <html lang="en-AU">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Pearl Tours | Sri Lanka</title>
-<style>
-* { box-sizing:border-box }
-body { margin:0; background:#faf6ec; color:#163d37; font:1rem/1.55 system-ui,sans-serif }
-.hero { position:relative; isolation:isolate; min-height:92svh; display:flex; flex-direction:column; justify-content:space-between; padding:2rem clamp(1.5rem,7vw,8rem) 9vh; color:white; background:#254d45 }
-.media { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:-3 }
-video.media { opacity:0; transition:opacity .6s; z-index:-2 }
-.hero::after { content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(90deg,#072820ba,transparent),linear-gradient(0deg,#082a23ad,transparent 75%) }
-header { display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #ffffff70; padding-bottom:1rem }
-header strong { font:2rem Georgia,serif }
-h1,h2 { font-family:Georgia,serif; font-weight:400; line-height:1.04 }
-h1 { font-size:clamp(4rem,9vw,9rem); margin:0; letter-spacing:-.06em }
-.intro p { max-width:38ch; margin:1.4rem 0 2rem }
-a { color:inherit }
-.cta { display:inline-block; background:#f9f4dd; color:#133f34; border-radius:30px; padding:.8rem 1.6rem; text-decoration:none }
-#tours { padding:4rem 7vw }
-h2 { font-size:clamp(2.5rem,5vw,5rem); margin:0 0 2rem }
-details { border-top:1px solid #78968b; padding:1rem 0 }
-summary,button { cursor:pointer }
-button { position:absolute; bottom:1rem; right:1rem; background:#183e36; color:white; border:1px solid white; border-radius:2rem; padding:.5rem 1rem }
-.why { padding:clamp(3rem,7vw,7rem) 7vw; display:grid; grid-template-columns:1fr 1fr; gap:2rem; background:#edf1e9 }
-.why h2,.why p { margin:0 }
-.why p { max-width:46ch; align-self:center; font-size:1.15rem }
-@media (max-width:680px) { .why { grid-template-columns:1fr; gap:1rem } }
-#featured {padding:4rem 7vw 0}.tour-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr));gap:2rem}.tour-grid img{width:100%;aspect-ratio:8/5;object-fit:cover}.tour-grid h3{font:2rem Georgia,serif;margin:.5rem 0}.tour-grid small{display:block;line-height:1.6}
-#experiences { padding:4rem 7vw; background:#edf1e9 }
-</style>
-<main>
-<section class="hero">
-<img class="media" src="https://res.cloudinary.com/dvdwvlhpy/image/upload/f_auto,q_auto,w_1800,c_limit/v1777220412/Website_Images_1_fluhcx.png" fetchpriority="high" alt="">
-<video class="media" muted loop playsinline aria-hidden="true"></video>
-<header><strong>Pearl Tours</strong><a href="#featured">Our tours</a></header>
-<div class="intro"><h1>Discover<br><i>Sri Lanka.</i></h1>
-<p>From the tea hills to the Indian Ocean, explore the island with our family in Australia and our travel partners in Sri Lanka.</p>
-<a class="cta" href="#featured">Explore tours ↗</a></div>
-<button hidden>Pause film</button>
-</section>
-<section class="why" aria-labelledby="why-pearl">
-<h2 id="why-pearl">Why Pearl Tours?</h2>
-<p>Your trip starts with a conversation in Australia. Tell us what you’d love to see, and we’ll help you choose an itinerary from our travel partners in Sri Lanka. From there, we can talk through the experiences you’d like to add along the way.</p>
-</section>
-<section id="featured"><h2>Featured tours</h2><div class="tour-grid"><article><img loading="lazy" src="https://res.cloudinary.com/dvdwvlhpy/image/upload/f_auto,q_auto,w_800,h_500,c_fill/v1777227028/1_c9sn3v.png" alt=""><p>Wildlife · 11 Days 10 Nights</p><h3><a href="tours/eco.html">Catch The Nature</a></h3><p>Follow rainforest trails in Sinharaja and head out on safari in Udawalawe.</p><small>Airport → Negambo → Kandy → Nuwara Eliya → Ella → Udawalawe → Deniyaya → Ahungalla → Colombo → Airport</small></article>
-<article><img loading="lazy" src="https://res.cloudinary.com/dvdwvlhpy/image/upload/f_auto,q_auto,w_800,h_500,c_fill/v1777227924/1_urpcfw.png" alt=""><p>History & culture · 8 Days 7 Nights</p><h3><a href="tours/cultural.html">Cultural Triangle Classic</a></h3><p>Walk through ancient Anuradhapura, climb Sigiriya and explore the cave temples at Dambulla.</p><small>Airport → Colombo → Anuradhapura → Sigiriya → Dambulla → Kandy → Airport</small></article>
-<article><img loading="lazy" src="https://res.cloudinary.com/dvdwvlhpy/image/upload/f_auto,q_auto,w_800,h_500,c_fill/v1777228502/Website_Images_-02_osj2iq.png" alt=""><p>Adventure · 8 Days 7 Nights</p><h3><a href="tours/adventure.html">Adrenaline Sri Lanka</a></h3><p>Raft at Kitulgala, hike in the hills around Ella and finish on the surf coast at Arugam Bay.</p><small>Airport → Colombo → Kitulgala → Nuwara Eliya → Ella → Arugam Bay → Airport</small></article></div></section>
-<section id="tours"><h2>Explore by interest</h2>
-<details><summary>Wildlife</summary><p><a href="tours/eco.html">Catch The Nature</a> · 11 Days 10 Nights</p></details>
-<details><summary>History &amp; culture</summary><p><a href="tours/cultural.html">Cultural Triangle Classic</a> · 8 Days 7 Nights</p></details>
-<details><summary>Adventure</summary><p><a href="tours/adventure.html">Adrenaline Sri Lanka</a> · 8 Days 7 Nights</p></details>
-</section>
-<section id="experiences" aria-labelledby="experience-title"><h2 id="experience-title">Experiences to add to your trip</h2><div class="tour-grid"><article><img loading="lazy" src="https://res.cloudinary.com/dvdwvlhpy/image/upload/v1779436984/3_glactw.png" alt=""><p>Half day</p><h3>Walk Galle Fort with a local</h3><p>Follow the ramparts and slip into the fort’s narrow lanes with a guide who shares the stories of the families who live there.</p></article>
-<article><img loading="lazy" src="https://res.cloudinary.com/dvdwvlhpy/image/upload/v1779697123/11_sdh30v.png" alt=""><p>Half day</p><h3>From market to kitchen</h3><p>Browse a local market with a guide, then step into the kitchen to cook alongside a Sri Lankan chef.</p></article>
-<article><img loading="lazy" src="https://res.cloudinary.com/dvdwvlhpy/image/upload/v1779440753/11_wipucj.png" alt=""><p>Morning · 4 hours</p><h3>Sunrise on Pidurangala Rock</h3><p>Climb before dawn for a view across to Sigiriya, then come down for a traditional Sri Lankan breakfast.</p></article></div></section></main>
-<script>
-const film = document.querySelector('video');
-const control = document.querySelector('button');
-if (!matchMedia('(prefers-reduced-motion: reduce)').matches && !navigator.connection?.saveData) {
-  function showPhoto() {
-    clearTimeout(deadline);
-    film.onplaying = null;
-    film.onerror = null;
-    film.pause();
-    film.removeAttribute('src');
-    film.load();
-    film.style.opacity = 0;
-    control.hidden = true;
-  }
-  const deadline = setTimeout(showPhoto, 4000);
-  film.onplaying = () => {
-    clearTimeout(deadline);
-    film.style.opacity = 1;
-    control.hidden = false;
-    control.textContent = 'Pause film';
-  };
-  film.onerror = showPhoto;
-  film.src = 'https://raw.githubusercontent.com/ChandrinSri/kay-tours/main/public/images/hero.mp4';
-  film.play().catch(() => { if (film.hasAttribute('src')) showPhoto(); });
-  control.onclick = () => {
-    if (film.paused) film.play().catch(showPhoto);
-    else { film.pause(); control.textContent = 'Play film'; }
-  };
-}
-</script></html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pearl Tours | Sri Lanka</title>
+  </head>
+  <body><div id="root"></div><script type="module" src="/src/main.tsx"></script></body>
+</html>

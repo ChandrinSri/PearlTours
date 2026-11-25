@@ -1,0 +1,31 @@
+
+* { box-sizing:border-box }
+body { margin:0; background:#faf6ec; color:#163d37; font:1rem/1.55 system-ui,sans-serif }
+.hero { position:relative; isolation:isolate; min-height:92svh; display:flex; flex-direction:column; justify-content:space-between; padding:2rem clamp(1.5rem,7vw,8rem) 9vh; color:white; background:#254d45 }
+.media { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:-3 }
+video.media { opacity:0; transition:opacity .6s; z-index:-2 }
+.hero::after { content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(90deg,#072820ba,transparent),linear-gradient(0deg,#082a23ad,transparent 75%) }
+header { display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #ffffff70; padding-bottom:1rem }
+header strong { font:2rem Georgia,serif }
+h1,h2 { font-family:Georgia,serif; font-weight:400; line-height:1.04 }
+h1 { font-size:clamp(4rem,9vw,9rem); margin:0; letter-spacing:-.06em }
+.intro p { max-width:38ch; margin:1.4rem 0 2rem }
+a { color:inherit }
+.cta { display:inline-block; background:#f9f4dd; color:#133f34; border-radius:30px; padding:.8rem 1.6rem; text-decoration:none }
+#tours { padding:4rem 7vw }
+h2 { font-size:clamp(2.5rem,5vw,5rem); margin:0 0 2rem }
+details { border-top:1px solid #78968b; padding:1rem 0 }
+summary,button { cursor:pointer }
+button { position:absolute; bottom:1rem; right:1rem; background:#183e36; color:white; border:1px solid white; border-radius:2rem; padding:.5rem 1rem }
+.why { padding:clamp(3rem,7vw,7rem) 7vw; display:grid; grid-template-columns:1fr 1fr; gap:2rem; background:#edf1e9 }
+.why h2,.why p { margin:0 }
+.why p { max-width:46ch; align-self:center; font-size:1.15rem }
+@media (max-width:680px) { .why { grid-template-columns:1fr; gap:1rem } }
+#featured {padding:4rem 7vw 0}.tour-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr));gap:2rem}.tour-grid img{width:100%;aspect-ratio:8/5;object-fit:cover}.tour-grid h3{font:2rem Georgia,serif;margin:.5rem 0}.tour-grid small{display:block;line-height:1.6}
+#experiences { padding:4rem 7vw; background:#edf1e9 }
+
+.itinerary {max-width:52rem;margin:auto;padding:clamp(1.5rem,5vw,4rem);font:1.05rem/1.65 system-ui}
+.itinerary h1 {font-size:clamp(2.7rem,7vw,5rem);margin:1em 0}
+.itinerary h2 {font-size:1.6rem;margin:1em 0}
+.itinerary img {width:100%;max-height:24rem;object-fit:cover}
+.itinerary section {border-top:1px solid #becac2}

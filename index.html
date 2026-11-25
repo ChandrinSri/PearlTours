@@ -26,21 +26,25 @@ button { position:absolute; bottom:1rem; right:1rem; background:#183e36; color:w
 .why h2,.why p { margin:0 }
 .why p { max-width:46ch; align-self:center; font-size:1.15rem }
 @media (max-width:680px) { .why { grid-template-columns:1fr; gap:1rem } }
+#featured {padding:4rem 7vw 0}.tour-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr));gap:2rem}.tour-grid img{width:100%;aspect-ratio:8/5;object-fit:cover}.tour-grid h3{font:2rem Georgia,serif;margin:.5rem 0}.tour-grid small{display:block;line-height:1.6}
 </style>
 <main>
 <section class="hero">
 <img class="media" src="https://res.cloudinary.com/dvdwvlhpy/image/upload/f_auto,q_auto,w_1800,c_limit/v1777220412/Website_Images_1_fluhcx.png" fetchpriority="high" alt="">
 <video class="media" muted loop playsinline aria-hidden="true"></video>
-<header><strong>Pearl Tours</strong><a href="#tours">Our tours</a></header>
+<header><strong>Pearl Tours</strong><a href="#featured">Our tours</a></header>
 <div class="intro"><h1>Discover<br><i>Sri Lanka.</i></h1>
 <p>From the tea hills to the Indian Ocean, explore the island with our family in Australia and our travel partners in Sri Lanka.</p>
-<a class="cta" href="#tours">Explore tours ↗</a></div>
+<a class="cta" href="#featured">Explore tours ↗</a></div>
 <button hidden>Pause film</button>
 </section>
 <section class="why" aria-labelledby="why-pearl">
 <h2 id="why-pearl">Why Pearl Tours?</h2>
 <p>Your trip starts with a conversation in Australia. Tell us what you’d love to see, and we’ll help you choose an itinerary from our travel partners in Sri Lanka. From there, we can talk through the experiences you’d like to add along the way.</p>
 </section>
+<section id="featured"><h2>Featured tours</h2><div class="tour-grid"><article><img loading="lazy" src="https://res.cloudinary.com/dvdwvlhpy/image/upload/f_auto,q_auto,w_800,h_500,c_fill/v1777227028/1_c9sn3v.png" alt=""><p>Wildlife · 11 Days 10 Nights</p><h3><a href="tours/eco.html">Catch The Nature</a></h3><p>Follow rainforest trails in Sinharaja and head out on safari in Udawalawe.</p><small>Airport → Negambo → Kandy → Nuwara Eliya → Ella → Udawalawe → Deniyaya → Ahungalla → Colombo → Airport</small></article>
+<article><img loading="lazy" src="https://res.cloudinary.com/dvdwvlhpy/image/upload/f_auto,q_auto,w_800,h_500,c_fill/v1777227924/1_urpcfw.png" alt=""><p>History & culture · 8 Days 7 Nights</p><h3><a href="tours/cultural.html">Cultural Triangle Classic</a></h3><p>Walk through ancient Anuradhapura, climb Sigiriya and explore the cave temples at Dambulla.</p><small>Airport → Colombo → Anuradhapura → Sigiriya → Dambulla → Kandy → Airport</small></article>
+<article><img loading="lazy" src="https://res.cloudinary.com/dvdwvlhpy/image/upload/f_auto,q_auto,w_800,h_500,c_fill/v1777228502/Website_Images_-02_osj2iq.png" alt=""><p>Adventure · 8 Days 7 Nights</p><h3><a href="tours/adventure.html">Adrenaline Sri Lanka</a></h3><p>Raft at Kitulgala, hike in the hills around Ella and finish on the surf coast at Arugam Bay.</p><small>Airport → Colombo → Kitulgala → Nuwara Eliya → Ella → Arugam Bay → Airport</small></article></div></section>
 <section id="tours"><h2>Explore by interest</h2>
 <details><summary>Wildlife</summary><p>Spend a morning on safari looking for elephants and spotting birds along the water.</p></details>
 <details><summary>History &amp; culture</summary><p>Explore ancient kingdoms, rock fortresses and the temples of the Cultural Triangle.</p></details>

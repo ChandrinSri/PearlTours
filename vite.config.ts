@@ -4,7 +4,7 @@ export default defineConfig({
   base: './',
   build: {
     rollupOptions: {
-      input: ['index.html', 'about.html', 'contact.html', 'tours/eco.html', 'tours/cultural.html', 'tours/adventure.html'],
+      input: ['index.html', 'about.html', 'contact.html', 'tours.html', 'tours/eco.html', 'tours/cultural.html', 'tours/adventure.html'],
     },
   },
 })

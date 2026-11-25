@@ -4,7 +4,7 @@ export default function About() {
   return <>
     <header className="about-header">
       <a href="index.html">Pearl Tours</a>
-      <nav aria-label="Main navigation"><a href="index.html#featured">Our tours</a> <a href="about.html" aria-current="page">About us</a> <a href="contact.html">Contact us</a></nav>
+      <nav aria-label="Main navigation"><a href="tours.html">Our tours</a> <a href="about.html" aria-current="page">About us</a> <a href="contact.html">Contact us</a></nav>
     </header>
     <main className="about-story">
       <h1>About Pearl Tours</h1>

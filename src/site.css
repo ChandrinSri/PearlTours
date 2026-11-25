@@ -59,3 +59,7 @@ header nav { display:flex; gap:1rem; align-items:center }
 .enquiry input, .enquiry textarea, .enquiry select { width:100%; font:inherit; padding:.65rem; border:1px solid #799188; border-radius:.35rem }
 .enquiry button { justify-self:start; padding:.7rem 1.2rem; color:white; background:#163d37; border:0; border-radius:2rem; font:inherit }
 .enquiry button:disabled { opacity:.6; cursor:default }
+.tour-catalogue { padding:clamp(2rem,6vw,6rem) 7vw }
+.tour-catalogue h1 { font-size:clamp(3rem,7vw,5rem) }
+.tour-filters { display:flex; flex-wrap:wrap; gap:1rem; margin-top:2rem }
+.tour-filters select { font:inherit; padding:.45rem; border-radius:.35rem }

@@ -1,3 +1,4 @@
+import Tours from './Tours'
 import Contact from './Contact'
 import About from './About'
 import { createRoot } from 'react-dom/client'
@@ -7,7 +8,10 @@ import { tours } from './data'
 import './site.css'
 
 const tour = tours.find(item => location.pathname.endsWith(`/tours/${item.slug}.html`))
-const pages = { 'about.html': <About />, 'contact.html': <Contact /> }
-const page = location.pathname.endsWith('/contact.html') ? pages['contact.html']
-  : location.pathname.endsWith('/about.html') ? pages['about.html'] : <Home />
+const pages: Record<string, React.ReactNode> = {
+  'about.html': <About />,
+  'contact.html': <Contact />,
+  'tours.html': <Tours />,
+}
+const page = pages[location.pathname.split('/').pop() ?? ''] ?? <Home />
 createRoot(document.getElementById('root')!).render(tour ? <TourDetail tour={tour} /> : page)

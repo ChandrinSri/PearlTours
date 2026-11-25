@@ -1,3 +1,4 @@
+import TourGrid from './TourGrid'
 import Footer from './Footer'
 import Hero from './Hero'
 import { experiences, tours } from './data'
@@ -12,14 +13,8 @@ function WhyPearl() {
 function FeaturedTours() {
   return <section id="featured">
     <h2>Featured tours</h2>
-    <div className="tour-grid">{tours.map(tour =>
-      <article key={tour.slug}>
-        <img loading="lazy" src={tour.image} alt="" />
-        <p>{tour.category} · {tour.duration}</p>
-        <h3><a href={`tours/${tour.slug}.html`}>{tour.title}</a></h3>
-        <p>{tour.summary}</p><small>{tour.route}</small>
-      </article>
-    )}</div>
+    <TourGrid tours={tours} />
+    <a href="tours.html">Browse all tours →</a>
   </section>
 }
 
@@ -55,3 +50,4 @@ export default function Home() {
     </>
   )
 }
+

@@ -12,7 +12,7 @@ export default function Tours() {
   return <>
     <header className="about-header">
       <a href="index.html">Pearl Tours</a>
-      <nav aria-label="Main navigation"><a href="tours.html" aria-current="page">Our tours</a> <a href="about.html">About us</a> <a href="contact.html">Contact us</a></nav>
+      <nav aria-label="Main navigation"><a href="tours.html" aria-current="page">Our tours</a> <a href="experiences.html">Experiences</a> <a href="about.html">About us</a> <a href="contact.html">Contact us</a></nav>
     </header>
     <main className="tour-catalogue">
       <h1>Sri Lanka tours</h1>

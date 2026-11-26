@@ -6,7 +6,7 @@ export default function Footer() {
         <a href="index.html#why-pearl">Why Pearl Tours?</a>
         <a href="tours.html">Our tours</a>
         <a href="index.html#tours">Explore by interest</a>
-        <a href="index.html#experiences">Experiences</a>
+        <a href="experiences.html">Experiences</a>
         <a href="about.html">About us</a>
         <a href="contact.html">Contact us</a>
       </nav>

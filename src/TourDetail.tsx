@@ -24,3 +24,4 @@ export default function TourDetail({ tour }: { tour: Tour }) {
   </main>
 }
 
+

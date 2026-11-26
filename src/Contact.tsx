@@ -1,4 +1,5 @@
 /// <reference types="vite/client" />
+import { catalogue } from './experienceCatalogue'
 import type { FormEvent } from 'react'
 import Footer from './Footer'
 import { tours } from './data'
@@ -17,11 +18,12 @@ function openDraft(event: FormEvent<HTMLFormElement>) {
 
 export default function Contact() {
   const slug = new URLSearchParams(location.search).get('tour')
+  const experience = catalogue.find(item => item.id === new URLSearchParams(location.search).get("experience"))
   const selected = tours.find(tour => tour.slug === slug)
   return <>
     <header className="about-header">
       <a href="index.html">Pearl Tours</a>
-      <nav aria-label="Main navigation"><a href="tours.html">Our tours</a> <a href="about.html">About us</a> <a href="contact.html" aria-current="page">Contact us</a></nav>
+      <nav aria-label="Main navigation"><a href="tours.html">Our tours</a> <a href="experiences.html">Experiences</a> <a href="about.html">About us</a> <a href="contact.html" aria-current="page">Contact us</a></nav>
     </header>
     <main className="about-story">
       <h1>Contact us</h1>
@@ -33,7 +35,7 @@ export default function Contact() {
           <option value="">General enquiry</option>
           {tours.map(tour => <option key={tour.slug} value={tour.slug}>{tour.title}</option>)}
         </select></label>
-        <label>Your message<textarea name="message" rows={5} required /></label>
+        <label>Your message<textarea defaultValue={experience ? "I’m interested in " + experience.title + "." : ""} name="message" rows={5} required /></label>
         <p>{inbox ? 'Review and send your enquiry in your email app.' : 'Email enquiries will open soon.'}</p>
         <button type="submit" disabled={!inbox}>Open email draft</button>
       </form>

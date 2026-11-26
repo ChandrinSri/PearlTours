@@ -1,19 +1,54 @@
 export const tours = [
+{
+  "slug": "south-coast",
+  "title": "South Coast Explorer",
+  "duration": "6 Days 5 Nights",
+  "category": "Coast & beaches",
+  "image": "https://res.cloudinary.com/dvdwvlhpy/image/upload/f_auto,q_auto,w_800,h_500,c_fill/v1777227031/3_h4yan0.png",
+  "summary": "Walk the ramparts of Galle Fort, leave an afternoon free for Mirissa Beach, then follow the coast to Tangalle. This six-day route suits travellers who want short sightseeing stops and time by the water.",
+  "route": "Airport → Colombo → Galle → Mirissa → Tangalle → Airport",
+  "days": [
+    {
+      "title": "Day 1 — Airport → Colombo",
+      "description": "Arrival and transfer to Colombo. Evening stroll along Galle Face Green. Overnight in Colombo."
+    },
+    {
+      "title": "Day 2 — Colombo → Galle",
+      "description": "Coastal drive to Galle. Explore the UNESCO-listed Galle Fort, Dutch colonial architecture, boutique shops and ocean views."
+    },
+    {
+      "title": "Day 3 — Galle → Mirissa",
+      "description": "Morning at leisure in Galle. Afternoon transfer to Mirissa. Sunset on the beach."
+    },
+    {
+      "title": "Day 4 — Mirissa",
+      "description": "Head out from Mirissa on a whale-watching trip if sea conditions allow. Spend the afternoon snorkelling, then return to the beach for the evening."
+    },
+    {
+      "title": "Day 5 — Mirissa → Tangalle",
+      "description": "Continue along the coast to Tangalle. Seasonal turtle watching is on the itinerary here. Wildlife sightings depend on the day."
+    },
+    {
+      "title": "Day 6 — Tangalle → Airport",
+      "description": "After breakfast, transfer to the airport. Farewell from Sri Lanka!"
+    }
+  ]
+},
   {
     "slug": "eco",
     "title": "Catch The Nature",
     "category": "Wildlife",
     "duration": "11 Days 10 Nights",
     "image": "https://res.cloudinary.com/dvdwvlhpy/image/upload/f_auto,q_auto,w_800,h_500,c_fill/v1777227028/1_c9sn3v.png",
-    "summary": "Follow rainforest trails in Sinharaja and head out on safari in Udawalawe.",
-    "route": "Airport → Negambo → Kandy → Nuwara Eliya → Ella → Udawalawe → Deniyaya → Ahungalla → Colombo → Airport",
+    "summary": "For travellers who plan a holiday around wildlife. Walk Horton Plains, head into Udawalawe on safari and stay near Sinharaja for an early birdwatching walk before the coast.",
+    "route": "Airport → Negombo → Kandy → Nuwara Eliya → Ella → Udawalawe → Deniyaya → Ahungalla → Colombo → Airport",
     "days": [
       {
-        "title": "Day 1 — Airport → Negambo",
-        "description": "Welcome to Sri Lanka. On arrival at the International Airport, you are met by our guide and driven to your hotel in Negambo. In the evening, enjoy a boat safari on Negambo Lagoon."
+        "title": "Day 1 — Airport → Negombo",
+        "description": "Welcome to Sri Lanka. On arrival at the International Airport, you are met by our guide and driven to your hotel in Negombo. In the evening, enjoy a boat safari on Negombo Lagoon."
       },
       {
-        "title": "Day 2 — Negambo → Kandy",
+        "title": "Day 2 — Negombo → Kandy",
         "description": "After breakfast, checkout from the hotel and proceed to Kandy (a UNESCO World Heritage Site). In the evening enjoy a city tour of Kandy. Overnight stay at your hotel."
       },
       {
@@ -146,7 +181,7 @@ export const tours = [
     "category": "Wildlife",
     "duration": "7 Days 6 Nights",
     "image": "https://res.cloudinary.com/dvdwvlhpy/image/upload/f_auto,q_auto,w_800,h_500,c_fill/v1777227028/2_ykubrl.png",
-    "summary": "Travel from the tea country around Nuwara Eliya to Mirissa on the southern coast.",
+    "summary": "A week for your first visit. Travel from Kandy into tea country, take the train to Ella and walk up Little Adam’s Peak. Finish with two nights in Mirissa, with a full afternoon free for the beach.",
     "route": "Airport → Colombo → Kandy → Nuwara Eliya → Ella → Mirissa → Airport",
     "days": [
       {
@@ -256,3 +291,4 @@ export const optionalActivities = [
     summary: 'Climb before dawn for views of Sigiriya, then sit down to a Sri Lankan breakfast.',
   },
 ]
+

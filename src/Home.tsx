@@ -1,7 +1,8 @@
+import { FeaturedExperiences } from './Experiences'
 import TourGrid from './TourGrid'
 import Footer from './Footer'
 import Hero from './Hero'
-import { experiences, tours } from './data'
+import { tours } from './data'
 
 function WhyPearl() {
   return <section className="why" aria-labelledby="why-pearl">
@@ -12,8 +13,8 @@ function WhyPearl() {
 
 function FeaturedTours() {
   return <section id="featured">
-    <h2>Featured tours</h2>
-    <TourGrid tours={tours.filter(tour => ['eco', 'cultural', 'adventure'].includes(tour.slug))} />
+    <h2>Find your journey</h2>
+    <TourGrid tours={['natures-treasures', 'eco', 'south-coast'].flatMap(slug => tours.filter(tour => tour.slug === slug))} />
     <a href="tours.html">Browse all tours →</a>
   </section>
 }
@@ -30,22 +31,10 @@ function Interests() {
   </section>
 }
 
-function Experiences() {
-  return <section id="experiences" aria-labelledby="experience-title">
-    <h2 id="experience-title">Experiences to add to your trip</h2>
-    <div className="tour-grid">{experiences.map(item =>
-      <article key={item.title}>
-        <img loading="lazy" src={item.image} alt="" /><p>{item.duration}</p>
-        <h3>{item.title}</h3><p>{item.summary}</p>
-      </article>
-    )}</div>
-  </section>
-}
-
 export default function Home() {
   return (
     <>
-      <main><Hero /><WhyPearl /><FeaturedTours /><Interests /><Experiences /></main>
+      <main><Hero /><FeaturedExperiences /><FeaturedTours /><WhyPearl /><Interests /></main>
       <Footer />
     </>
   )

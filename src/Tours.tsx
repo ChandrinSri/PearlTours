@@ -27,7 +27,11 @@ export default function Tours() {
         </select></label>
       </div>
       <p role="status">{matches.length ? matches.length + (matches.length === 1 ? ' tour' : ' tours') : 'No tours match. Try another interest or duration.'}</p>
-      <TourGrid tours={matches} />
+      {[...new Set(matches.map(tour => tour.category))].map(category =>
+        <section className="collection" key={category}>
+          <h2>{category}</h2><TourGrid tours={matches.filter(tour => tour.category === category)} />
+        </section>
+      )}
     </main>
     <Footer />
   </>

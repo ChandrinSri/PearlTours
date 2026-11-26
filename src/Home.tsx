@@ -34,7 +34,7 @@ function Interests() {
 export default function Home() {
   return (
     <>
-      <main><Hero /><FeaturedExperiences /><FeaturedTours /><WhyPearl /><Interests /></main>
+      <main><Hero /><FeaturedTours /><FeaturedExperiences /><WhyPearl /><Interests /></main>
       <Footer />
     </>
   )

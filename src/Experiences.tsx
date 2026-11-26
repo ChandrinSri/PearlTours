@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Footer from './Footer'
 import { catalogue } from './experienceCatalogue'
 
@@ -18,28 +18,34 @@ export function FeaturedExperiences() {
 }
 
 export default function Experiences() {
+  const [category, setCategory] = useState('All')
+  const [id, setId] = useState(() => location.hash.slice(1))
   useEffect(() => {
-    function reveal() {
-      const target = document.getElementById(location.hash.slice(1))
-      if (target instanceof HTMLDetailsElement) target.open = true
-      target?.scrollIntoView()
-    }
-    reveal()
-    window.addEventListener('hashchange', reveal)
-    return () => window.removeEventListener('hashchange', reveal)
+    const update = () => { setId(location.hash.slice(1)); window.scrollTo(0, 0) }
+    window.addEventListener('hashchange', update)
+    return () => window.removeEventListener('hashchange', update)
   }, [])
-  const categories = [...new Set(catalogue.map(item => item.category))]
+  const selected = catalogue.find(item => item.id === id)
+  const categories = ['All', ...new Set(catalogue.map(item => item.category))]
   return <><header className="about-header"><a href="index.html">Pearl Tours</a>
     <nav aria-label="Main navigation"><a href="tours.html">Our tours</a><a href="experiences.html" aria-current="page">Experiences</a><a href="about.html">About us</a><a href="contact.html">Contact us</a></nav></header>
-    <main className="tour-catalogue"><h1>Sri Lanka experiences</h1>
-    <p>Choose an experience to see what the day involves and how long to allow.</p>
-    <nav className="exp-categories" aria-label="Experience categories">{categories.map((name,i)=><a key={name} href={'#group-'+i}>{name}</a>)}</nav>
-    {categories.map((name,i)=><section key={name} id={'group-'+i} className="exp-group"><h2>{name}</h2>
-      {catalogue.filter(item=>item.category===name).map(item=><details key={item.id} id={item.id}>
-        <summary><strong>{item.title}</strong> · {item.duration}</summary>
-        <p>{item.description}</p><img className="exp-cover" loading="lazy" src={item.image} alt="" />
-        {item.fullDescription.map((p,i)=><p key={i}>{p}</p>)}
-        <div className="exp-gallery">{item.gallery.map(src=><img key={src} loading="lazy" src={src} alt="" />)}</div>
-        <p>{item.tags.join(' · ')}</p><a href={'contact.html?experience='+encodeURIComponent(item.id)}>Enquire about this experience →</a>
-      </details>)}</section>)}</main><Footer /></>
+    {selected ? <main className="itinerary">
+      <a href="experiences.html">← All experiences</a><h1>{selected.title}</h1>
+      <p>{selected.category} · {selected.duration}</p><img src={selected.image} alt="" />
+      <p>{selected.description}</p>{selected.fullDescription.map((paragraph,i)=><p key={i}>{paragraph}</p>)}
+      <div className="exp-gallery">{selected.gallery.map(src=><img key={src} loading="lazy" src={src} alt="" />)}</div>
+      <p>{selected.tags.join(' · ')}</p>
+      <a href={'contact.html?experience='+selected.id}>Enquire about this experience →</a>
+    </main> : <main className="tour-catalogue"><h1>Sri Lanka experiences</h1>
+      <label className="tour-filters">Explore by interest
+        <select value={category} onChange={event=>setCategory(event.target.value)}>
+          {categories.map(name=><option key={name}>{name}</option>)}
+        </select>
+      </label>
+      <div className="tour-grid collection">{catalogue.filter(item=>category === 'All' || item.category === category).map(item=>
+        <a className="experience-card" key={item.id} href={'#'+item.id}>
+          <img loading="lazy" src={item.image} alt="" />
+          <small>{item.category} · {item.duration}</small><h2>{item.title}</h2><p>{item.description}</p>
+        </a>)}</div>
+    </main>}<Footer /></>
 }
